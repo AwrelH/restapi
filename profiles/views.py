@@ -33,7 +33,7 @@ class ProfileDetail(APIView):
         return Response(serializer.data)
 
     def put(self, request, pk):
-        
+
         profile = self.get_object(pk)
         serializer = ProfileSerializer(
             profile, data=request.data, context={'request': request})
